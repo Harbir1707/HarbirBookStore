@@ -52,5 +52,13 @@ Added a new Admin area in Areaa and also added the view files
 Deleted the Data, Models and Controllers folders
 In last, updated the GitHub repo
 
+--------------- PART 2 ---------------------
+Starting time: 1455
+Date: 2023-11-06
+
+For the next part, firstly i build the application in order to confirm there is no error
+Make changes in the appsetting.json(modify the database name)
+
+
 
 
