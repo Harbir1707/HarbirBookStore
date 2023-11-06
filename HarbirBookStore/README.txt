@@ -66,6 +66,8 @@ IT IS WORKING...!
 
 Add the Category.cs file to the Models project and modify the Category.cs file  
 Then add the migration and made the changes in the dbcontext file
+Delete the AddCategoryToDb to fix the error and after that updated the database
+
 
 
 
