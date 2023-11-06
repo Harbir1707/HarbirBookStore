@@ -46,7 +46,7 @@ Run Successfully...!
 Now, Views are located in Areas and then copied the _ViewImport and _ViewStart to Customer Area
 Modified the _ViewStart.cshtml in order to reflected the new path
 Run the application 
-It Working...!
+Its Working...!
 
 Added a new Admin area in Areaa and also added the view files
 Deleted the Data, Models and Controllers folders
@@ -57,8 +57,12 @@ Starting time: 1455
 Date: 2023-11-06
 
 For the next part, firstly i build the application in order to confirm there is no error
-Make changes in the appsetting.json(modify the database name)
-
+Make changes in the appsetting.json(modify the database name) and then add the migration
+i selected the wrong the migration and now changed to the correct default project and run it- its working...
+paste the migration file's name here- 20231106201049_AddDefaultIdentityMigration.cs
+Review the file of the SQL and then updated the database after completing the migration
+checked the error and run it
+IT IS WORKING...!
 
 
 
