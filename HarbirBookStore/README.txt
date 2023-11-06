@@ -64,7 +64,8 @@ Review the file of the SQL and then updated the database after completing the mi
 checked the error and run it
 IT IS WORKING...!
 
-Add the Category.cs file to the Models project and then add the migration 
+Add the Category.cs file to the Models project and modify the Category.cs file  
+Then add the migration 
 
 
 
