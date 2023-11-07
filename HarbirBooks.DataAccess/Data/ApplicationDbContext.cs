@@ -15,5 +15,10 @@ namespace HarbirBookStore.DataAccess.Data
         }
 
         public DbSet<Category> Categories { get; set; }
+
+        public static implicit operator ApplicationDbContext(ApplicationException v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

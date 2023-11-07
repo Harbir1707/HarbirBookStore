@@ -69,6 +69,10 @@ Then added the migration and made the changes in the dbcontext file
 Deleted the AddCategoryToDb to fix the error and after that updated the database
 Added a new folder from name- Repository and then added the IRepository folder inside it
 Added a new item called IRepository.cs and modified it
+Made another item and then modified the code in the Repository folder
+Created the individual repo for category and all potential models to be added in the CategoryRepository.cs and ICategoryRepository.cs
+modified the CategoryRepository.cs and ICategoryRepository.cs
+made some changes in the categoryRepository.cs
 
 
 
