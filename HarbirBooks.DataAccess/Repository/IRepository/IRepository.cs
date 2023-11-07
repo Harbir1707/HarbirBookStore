@@ -13,7 +13,16 @@ namespace HarbirBooks.DataAccess.Repository.IRepository
         IEnumerable<T> GetAll(
             Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
-            string includeProperties = null
+            string includeProperties = null 
             );
+        T GetFirstOrDefault(
+            Expression<Func<T, bool>> filter = null,
+            string inculdeProperties = null
+            );
+        void Add(T entity);                 // add entity
+        void Remove(int id);                // remove an object
+        void Remove(T entity);              // another way to remove an object 
+        void Removerange(IEnumerable<T> entity);  // remove complete range of entities
+
     }
 }

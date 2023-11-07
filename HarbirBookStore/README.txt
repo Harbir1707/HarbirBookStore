@@ -56,18 +56,19 @@ In last, updated the GitHub repo
 Starting time: 1455
 Date: 2023-11-06
 
-For the next part, firstly i build the application in order to confirm there is no error
-Make changes in the appsetting.json(modify the database name) and then add the migration
+For the next part, firstly i built the application in order to confirm there is no error
+Made changes in the appsetting.json(modify the database name) and then added the migration
 i selected the wrong the migration and now changed to the correct default project and run it- its working...
 paste the migration file's name here- 20231106201049_AddDefaultIdentityMigration.cs
 Review the file of the SQL and then updated the database after completing the migration
 checked the error and run it
 IT IS WORKING...!
 
-Add the Category.cs file to the Models project and modify the Category.cs file  
-Then add the migration and made the changes in the dbcontext file
-Delete the AddCategoryToDb to fix the error and after that updated the database
-
+Added the Category.cs file to the Models project and modify the Category.cs file  
+Then added the migration and made the changes in the dbcontext file
+Deleted the AddCategoryToDb to fix the error and after that updated the database
+Added a new folder from name- Repository and then added the IRepository folder inside it
+Added a new item called IRepository.cs and modified it
 
 
 
