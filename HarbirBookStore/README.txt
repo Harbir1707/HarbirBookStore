@@ -85,7 +85,9 @@ Now added the additional line in startup.cs which will be accessible with DI by 
 Added a new MVC controller from name- CategoryController.cs
 Added the code in the CategoryControlller.cs and then created a new folder from name Category
 Then created a Index.cshtml inside the Category folder
-Modified the Index.cshtml
+Modified the Index.cshtml and then made some changes in the code inside the Layout.cshtml
+save the changes and run it
+IT IS WORKING..!
 
 
 
