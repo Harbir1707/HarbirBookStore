@@ -77,6 +77,12 @@ Added a new interface in the IRepository folder from ISP_Call.cs and then instal
 Added a new class called SP_Call.cs inside Repository folder made some changes in the code and then modify the ISP_Call interface code
 Added a new interface called IUnitOfWork inside the IRepository folder and modify the code
 Then added the UnitOfWork.cs in the Repository folder
+Modify the code in it and there were several errors
+Fixing the error and run it
+ITs WORKING...!
+
+Now added the additional line in startup.cs which will be accessible with DI by any controller
+Added a new MVC controller from name- CategoryController.cs
 
 
 
