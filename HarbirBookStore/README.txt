@@ -73,6 +73,10 @@ Made another item and then modified the code in the Repository folder
 Created the individual repo for category and all potential models to be added in the CategoryRepository.cs and ICategoryRepository.cs
 modified the CategoryRepository.cs and ICategoryRepository.cs
 made some changes in the categoryRepository.cs
+Added a new interface in the IRepository folder from ISP_Call.cs and then installed the NuGet package for dapper
+Added a new class called SP_Call.cs inside Repository folder made some changes in the code and then modify the ISP_Call interface code
+Added a new interface called IUnitOfWork inside the IRepository folder and modify the code
+Then added the UnitOfWork.cs in the Repository folder
 
 
 

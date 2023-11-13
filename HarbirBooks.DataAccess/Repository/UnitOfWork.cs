@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace HarbirBooks.DataAccess.Repository.IRepository
+
 {
-    interface IUnitOfWork : IDisposable
+    interface UnitOfWork
     {
-        ICategoryRepository Category { get; }
-        ISP_Call SP_Call { get; }
     }
 }
