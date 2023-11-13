@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HarbirBookStore.Areas.Customers.Controllers
+namespace HarbirBookStore.Areas.Admin.Controllers
 {
     public class CategoryController : Controller
     {
