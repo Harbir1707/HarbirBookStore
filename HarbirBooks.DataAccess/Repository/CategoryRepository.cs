@@ -8,11 +8,11 @@ using System.Text;
 
 namespace HarbirBooks.DataAccess.Repository
 {
-    public class categoryRepository : Repository<Category>, ICategoryRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
         private readonly ApplicationDbContext _db;
 
-        public categoryRepository(ApplicationDbContext db) : base(db)
+        public CategoryRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
@@ -21,7 +21,7 @@ namespace HarbirBooks.DataAccess.Repository
         {
             // use .NET LINQ to retrieve the first or default category object
             // then pass the id as a generic entity which matches the category id
-            
+
             var objFromDb = _db.Categories.FirstOrDefault(s => s.Id == category.Id);
             if (objFromDb != null)    // save the changes if not null
             {
@@ -33,4 +33,4 @@ namespace HarbirBooks.DataAccess.Repository
 
 
 
-}   
+}
