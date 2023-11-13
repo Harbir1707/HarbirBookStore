@@ -90,6 +90,10 @@ save the changes and run it
 IT IS WORKING..!
 
 Modify the Index.cshtml and then deleted it and added the javaScript inside the category.js
+After that add the @section call inside the Index.cshtml
+save it and run it
+its showing error which i mentioned below:
+DataTables warning: table id=tblData - Ajax error. For more information about this error, please see http://datatables.net/tn/7
 
 
 
