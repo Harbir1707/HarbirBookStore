@@ -89,7 +89,7 @@ Modified the Index.cshtml and then made some changes in the code inside the Layo
 save the changes and run it
 IT IS WORKING..!
 
-Modify the Index.cshtml and then deleted it and added the javaScript instead of it
+Modify the Index.cshtml and then deleted it and added the javaScript inside the category.js
 
 
 
