@@ -103,8 +103,19 @@ modify the Upsert.cshtml with additional codes and then added the asp-action to 
 run it
 having an error in Repository.cs
 trying to fix it....
+finally fixed it..
 
-modified
+created an Upsert post action in CategoryController.cs and added the void Save() method to the IUnitOfWork
+made some changes in the _UnitOfWork.Save() method and removed the_db.SaveChanges() method in the CategoryRepository.cs
+checked the errors and found some of them
+fixed all the errors and then added the API call for HTTPDelete in CategoryController.cs
+added the delete functionality in Category.js along with onclick event to delete function
+added the Delete(url) function and after that checked the errors, found one error in the Repository.cs
+trying to fix it...
+finally fixed it and then saved all the changes and test the applictaion
+Updated the GitHub Repo
+closing time: 2346
+
 
 
 
