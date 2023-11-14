@@ -24,7 +24,7 @@ namespace HarbirBooks.DataAccess.Repository
             _db.Dispose();
         }
 
-        public void Execute(string procedurename, Dapper.DynamicParameters param = null)
+        public void Executes(string procedurename, Dapper.DynamicParameters param = null)
         {
             using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
             {

@@ -13,7 +13,9 @@ namespace HarbirBookStore
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
+
         {
             Configuration = configuration;
         }
@@ -28,7 +30,7 @@ namespace HarbirBookStore
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>()                    // options => options.SignIn.RequireConfirmedAccount = true
+            services.AddDefaultIdentity<IdentityUser>()                   
                  .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
@@ -36,12 +38,14 @@ namespace HarbirBookStore
 
         // This method gets called by runtime.Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseMigrationsEndPoint();
             }
+
             else
             {
                 app.UseExceptionHandler("/Home/Error");
@@ -50,12 +54,9 @@ namespace HarbirBookStore
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

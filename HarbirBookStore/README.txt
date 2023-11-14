@@ -97,6 +97,16 @@ DataTables warning: table id=tblData - Ajax error. For more information about th
 
 edited the code inside the CategoryController.cs and then created a new category using the Upsert action
 modify the code in it and then created the partial view for EDIT | BLACK
+then created the _CreateAndBackToListButton.cshtml and added the asp-action in it
+then agian created another partial view named-_EditAndBackToListButton and added the code in it
+modify the Upsert.cshtml with additional codes and then added the asp-action to the Index.cshtml
+run it
+having an error in Repository.cs
+trying to fix it....
+
+modified
+
+
 
 
 

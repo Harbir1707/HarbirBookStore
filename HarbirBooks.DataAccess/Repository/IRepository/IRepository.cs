@@ -15,10 +15,9 @@ namespace HarbirBooks.DataAccess.Repository.IRepository
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeProperties = null 
             );
-        T GetFirstOrDefault(
-            Expression<Func<T, bool>> filter = null,
-            string inculdeProperties = null
-            );
+
+        T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null);
+
         void Add(T entity);                 // add entity
         void Remove(int id);                // remove an object
         void Remove(T entity);              // another way to remove an object 

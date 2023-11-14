@@ -13,11 +13,10 @@ namespace HarbirBooks.DataAccess.Repository
     {                   // modify the database w/ db context
         private readonly ApplicationDbContext _db;      
         internal DbSet<T> dbSet;
-        private ApplicationException db;
 
         public Repository(ApplicationDbContext db)        
         {
-            _db = db;
+            _db = db; 
             this.dbSet = _db.Set<T>();
         }
 
@@ -86,6 +85,11 @@ namespace HarbirBooks.DataAccess.Repository
         public void RemoveRange(IEnumerable<T> entity)
         {
             dbSet.RemoveRange(entity);
+        }
+
+        void IRepository<T>.Removerange(IEnumerable<T> entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }
