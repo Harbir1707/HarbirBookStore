@@ -39,6 +39,27 @@ namespace HarbirBookStore.Areas.Admin.Controllers
             return View(category);
         }
 
+        // use HTTP post to define the post-action method
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult Upsert(Category category)
+        {
+            if(ModelState.IsValid)      //checks all validations in the model(e.g Name required) to increase security
+            {
+                if(category.Id == 0)
+                {
+                    _UnitOfWork.Category.Add(category);
+                    _UnitOfWork.Save();
+                }
+                else
+                {
+                    _UnitOfWork.Category.Update(category);
+                }
+            }
+            return View(category);
+        }
+
         // API calls here
         #region API CALLS
         [HttpGet]
