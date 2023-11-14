@@ -95,6 +95,9 @@ save it and run it
 its showing error which i mentioned below:
 DataTables warning: table id=tblData - Ajax error. For more information about this error, please see http://datatables.net/tn/7
 
+edited the code inside the CategoryController.cs and then created a new category using the Upsert action
+modify the code in it and then created the partial view for EDIT | BLACK
+
 
 
 
