@@ -72,6 +72,19 @@ namespace HarbirBookStore.Areas.Admin.Controllers
             var allObj = _UnitOfWork.Category.GetAll();
             return Json(new { data = allObj });
         }
+        [HttpDelete]
+
+        public IActionResult Delete(int id)
+        {
+            var objFromDb = _UnitOfWork.Category.Get(id);
+            if (objFromDb == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+            _UnitOfWork.Category.Remove(objFromDb);
+            _UnitOfWork.Save();
+            return Json(new { success = true, message = "Delete successful" });
+        }
         #endregion
     }
 }
