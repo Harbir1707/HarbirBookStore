@@ -56,6 +56,8 @@ namespace HarbirBookStore.Areas.Admin.Controllers
                 {
                     _UnitOfWork.Category.Update(category);
                 }
+                _UnitOfWork.Save();
+                return RedirectToAction(nameof(Index));         //to see all the categories
             }
             return View(category);
         }
