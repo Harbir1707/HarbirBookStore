@@ -116,6 +116,13 @@ finally fixed it and then saved all the changes and test the applictaion
 Updated the GitHub Repo
 closing time: 2346
 
+--------------- PART 3 ---------------------
+Starting time: 1545
+Date: 2023-11-20
+
+for the next part, 
+
+
 
 
 
