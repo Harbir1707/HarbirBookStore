@@ -19,7 +19,7 @@ namespace HarbirBooks.DataAccess.Repository
         }
         public void Update(CoverType coverType)
         {
-            var objFromDb = _db.CoverTypes.FirstOrDefault(s => s.Id == coverType.Id && s.Id != null);
+            var objFromDb = _db.CoverTypes.FirstOrDefault(s => s.Id == coverType.Id);
             if (objFromDb != null)
             {
                 objFromDb.Name = coverType.Name;

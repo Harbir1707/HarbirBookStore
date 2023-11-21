@@ -1,5 +1,6 @@
 ﻿using HarbirBooks.DataAccess.Repository;
 using HarbirBooks.Models;
+using HarbirBooks.Models.ViewModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,17 +15,7 @@ namespace HarbirBookStore.DataAccess.Data
             : base(options)
         {
         }
-
         public DbSet<Category> Categories { get; set; }
-
-        public static implicit operator ApplicationDbContext(ApplicationException v)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static implicit operator ApplicationDbContext(ApplicationDbConext v)
-        {
-            throw new NotImplementedException();
-        }
+        public DbSet<CoverType> CoverTypes { get; set; }
     }
 }
