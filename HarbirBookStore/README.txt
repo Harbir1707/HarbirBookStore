@@ -122,6 +122,10 @@ Date: 2023-11-20
 
 for the next part, first created the CoverTypeRepository.cs and ICoverTypeRepository.cs inside the Repository folder
 then made some changes in it and edited the UnitOfWork and IUnitOfWork
+created a CoverType.cs inside the Models folder and modified  it
+made CoverTypeController.cs inside the controllers and also created the Upsert.cshtml, then modified both of them
+found some errors and tried to fix it
+FIXED IT....!
 
 
 
