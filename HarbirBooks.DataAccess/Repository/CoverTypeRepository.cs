@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using HarbirBooks.DataAccess.Repository.IRepository;
 using HarbirBooks.Models;
@@ -18,7 +19,7 @@ namespace HarbirBooks.DataAccess.Repository
         }
         public void Update(CoverType coverType)
         {
-            var objFromDb = _db.CoverTypes.FirstOrDefault(s => s.Id == coverType.Id);
+            var objFromDb = _db.CoverTypes.FirstOrDefault(s => s.Id == coverType.Id && s.Id != null);
             if (objFromDb != null)
             {
                 objFromDb.Name = coverType.Name;
