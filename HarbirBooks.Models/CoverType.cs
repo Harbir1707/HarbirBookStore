@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace HarbirBooks.Models.ViewModels
+namespace HarbirBooks.Models
 {
     public class CoverType
     {
