@@ -120,7 +120,8 @@ closing time: 2346
 Starting time: 1545
 Date: 2023-11-20
 
-for the next part, 
+for the next part, first created the CoverTypeRepository.cs and ICoverTypeRepository.cs inside the Repository folder
+then made some changes in it and edited the UnitOfWork and IUnitOfWork
 
 
 
