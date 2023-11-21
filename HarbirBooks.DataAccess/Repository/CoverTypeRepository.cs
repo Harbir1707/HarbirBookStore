@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
+﻿using System.Linq;
 using HarbirBooks.DataAccess.Repository.IRepository;
 using HarbirBooks.Models;
 using HarbirBookStore.DataAccess.Data;
-using HarbirBooks.Models.ViewModels;
 
 namespace HarbirBooks.DataAccess.Repository
 {

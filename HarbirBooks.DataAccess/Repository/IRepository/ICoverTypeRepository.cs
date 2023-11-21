@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using HarbirBooks.Models;
-using HarbirBooks.Models.ViewModels;
+﻿using HarbirBooks.Models;
 
 namespace HarbirBooks.DataAccess.Repository.IRepository
 {

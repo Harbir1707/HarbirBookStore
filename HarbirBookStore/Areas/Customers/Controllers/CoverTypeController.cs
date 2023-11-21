@@ -1,11 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using HarbirBooks.DataAccess.Repository.IRepository;
 using HarbirBooks.Models;
-using HarbirBooks.Models.ViewModels;
 
 namespace VanshBookStore.Areas.Customers.Controllers
 {

@@ -1,6 +1,4 @@
-﻿using HarbirBooks.DataAccess.Repository;
-using HarbirBooks.Models;
-using HarbirBooks.Models.ViewModels;
+﻿using HarbirBooks.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
