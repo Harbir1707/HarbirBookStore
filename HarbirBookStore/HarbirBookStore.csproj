@@ -37,8 +37,4 @@
     <ProjectReference Include="..\HarbirBooks.Utility\HarbirBooks.Utility.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
-  </ItemGroup>
-
 </Project>
