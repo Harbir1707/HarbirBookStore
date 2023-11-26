@@ -1,6 +1,9 @@
 ﻿using HarbirBooks.DataAccess.Repository.IRepository;
+using HarbirBooks.Models;
+using HarbirBooks.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace HarbirBookStore.Areas.Admin.Controllers
 {
+
     [Area("Admin")]
     public class ProductController : Controller
     {
@@ -23,7 +27,7 @@ namespace HarbirBookStore.Areas.Admin.Controllers
         {
             return View();
         }
-        public IActionResult Upsert(int? id)        //get action method for Upsert 
+        public IActionResult Upsert(int? id)        
         {
             ProductVM productVM = new ProductVM()
             {
@@ -38,15 +42,14 @@ namespace HarbirBookStore.Areas.Admin.Controllers
                     Text = i.Name,
                     Value = i.Id.ToString()
                 }),
-            };    // using VanshBooks.Models;
+            };    
 
             if (id == null)
             {
-                // this is for create 
+                
                 return View(productVM);
             }
 
-            //this is for edit 
             productVM.Product = _unitOfWork.Product.Get(id.GetValueOrDefault());
             if (productVM.Product == null)
             {
@@ -55,9 +58,11 @@ namespace HarbirBookStore.Areas.Admin.Controllers
             return View(productVM);
 
         }
+
         //API calls here
         #region API CALLS
         [HttpGet]
+
         public IActionResult GetAll()
         {
             var allObj = _unitOfWork.Product.GetAll(includeProperties: "Category, CoverType");
@@ -66,6 +71,7 @@ namespace HarbirBookStore.Areas.Admin.Controllers
         }
 
         [HttpDelete]
+
         public IActionResult Delete(int id)
         {
             var objFromDb = _unitOfWork.Product.Get(id);
@@ -77,6 +83,7 @@ namespace HarbirBookStore.Areas.Admin.Controllers
             _unitOfWork.Save();
             return Json(new { success = true, message = "Delete Successful" });
         }
+
         #endregion
     }
 }
