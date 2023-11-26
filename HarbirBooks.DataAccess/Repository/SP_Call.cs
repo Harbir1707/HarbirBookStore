@@ -12,16 +12,18 @@ namespace HarbirBooks.DataAccess.Repository
 {
     public class SP_Call : ISP_Call
     {
+        //access the database
         private readonly ApplicationDbContext _db;
-        private static string ConnectionString = ""; 
+        private static string ConnectionString = ""; //needed to called the stored procedures 
 
-        
+        //constructor to open a SQL connection
         public SP_Call(ApplicationDbContext db)
         {
             _db = db;
             ConnectionString = db.Database.GetDbConnection().ConnectionString;
         }
 
+        //implements the ISP_Call Interface
         public void Dispose()
         {
             _db.Dispose();
@@ -83,5 +85,3 @@ namespace HarbirBooks.DataAccess.Repository
         }
     }
 }
-
-

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace HarbirBookStore.Area.Customers.Controllers
 {
+
     [Area("Customers")]
     public class HomeController : Controller
     {
@@ -34,5 +35,7 @@ namespace HarbirBookStore.Area.Customers.Controllers
         {
             return View(new HarbirBookStore.Models.ViewModels.ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }

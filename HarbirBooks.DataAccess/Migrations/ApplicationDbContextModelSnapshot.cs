@@ -36,7 +36,7 @@ namespace HarbirBooks.DataAccess.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("HarbirBooks.Models.ViewModels.CoverType", b =>
+            modelBuilder.Entity("HarbirBooks.Models.CoverType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -9,20 +9,20 @@ using System.Text;
 
 namespace HarbirBooks.DataAccess.Repository
 {
+   
     public class Repository<T> : IRepository<T> where T : class
-    {                                                                   // modify the database w/ db context
-        private readonly ApplicationDbContext _db;      
+    {
+        
+        private readonly ApplicationDbContext _db;     
         internal DbSet<T> dbSet;
-
-        public Repository(ApplicationDbContext db)        
+        public Repository(ApplicationDbContext db)     
         {
-            _db = db; 
+            _db = db;
             this.dbSet = _db.Set<T>();
         }
-
         public void Add(T entity)
         {
-            dbSet.Add(entity);      
+            dbSet.Add(entity);     
         }
 
         public T Get(int id)
@@ -50,7 +50,7 @@ namespace HarbirBooks.DataAccess.Repository
             {
                 return orderBy(query).ToList();
             }
-            return query.ToList();    
+            return query.ToList();   
         }
 
         public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
@@ -77,6 +77,7 @@ namespace HarbirBooks.DataAccess.Repository
             T entity = dbSet.Find(id);
             Remove(entity);
         }
+
         public void Remove(T entity)
         {
             dbSet.Remove(entity);
@@ -85,11 +86,6 @@ namespace HarbirBooks.DataAccess.Repository
         public void RemoveRange(IEnumerable<T> entity)
         {
             dbSet.RemoveRange(entity);
-        }
-
-        void IRepository<T>.Removerange(IEnumerable<T> entity)
-        {
-            throw new NotImplementedException();
         }
     }
 }

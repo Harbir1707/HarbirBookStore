@@ -2,6 +2,7 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
+
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
@@ -14,8 +15,11 @@
         </form>
     </li>
 }
+
 else
+
 {
+
     <li class="nav-item">
         <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
     </li>

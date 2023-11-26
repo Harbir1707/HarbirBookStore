@@ -2,7 +2,7 @@
 using HarbirBooks.DataAccess.Repository.IRepository;
 using HarbirBooks.Models;
 
-namespace VanshBookStore.Areas.Customers.Controllers
+namespace HarbirBookStore.Areas.Customers.Controllers
 {
     [Area("Admin")]
     public class CoverTypeController : Controller
@@ -53,15 +53,20 @@ namespace VanshBookStore.Areas.Customers.Controllers
             return View(coverType);
         }
 
+
         #region API CALLS
         [HttpGet]
+
         public IActionResult GetAll()
         {
             var allObj = _unitOfWork.CoverType.GetAll();
             return Json(new { data = allObj });
         }
 
+
         [HttpDelete]
+
+
         public IActionResult Delete(int id)
         {
             var objFromDb = _unitOfWork.CoverType.Get(id);

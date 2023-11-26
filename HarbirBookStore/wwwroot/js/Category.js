@@ -41,12 +41,12 @@ function Delete(url) {
     }).then((willDelete) => {
         if (willDelete) {
             $.ajax({
-                type: "Delete",
+                type: "DELETE",
                 url: url,
                 success: function (data) {
                     if (data.success) {
                         toastr.success(data.message);
-                        datatable.ajax.reload();
+                        dataTable.ajax.reload();
                     }
                     else {
                         toastr.error(data.message);
