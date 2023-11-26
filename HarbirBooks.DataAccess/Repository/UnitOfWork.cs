@@ -7,30 +7,30 @@ using System.Text;
 namespace HarbirBooks.DataAccess.Repository
 
 {
-    public class UnitOfWork : IUnitOfWork // Make the method public to access the class
+    public class UnitOfWork : IUnitOfWork 
     {
-        private readonly ApplicationDbContext _db; // The using statement
+        private readonly ApplicationDbContext _db; 
 
-        public UnitOfWork(ApplicationDbContext db) // Constructor to use DI and inject into the repositories
+        public UnitOfWork(ApplicationDbContext db) 
         {
             _db = db;
             Category = new CategoryRepository(_db);
             SP_Call = new SP_Call(_db);
-            CoverType = new CoverTypeRepository(_db); // Instantiate the CoverType repository
+            CoverType = new CoverTypeRepository(_db); 
             
         }
 
         public ICategoryRepository Category { get; private set; }
         public ISP_Call SP_Call { get; private set; }
-        public ICoverTypeRepository CoverType { get; private set; } // Ensure this is set in the constructor
-       
+        public ICoverTypeRepository CoverType { get; private set; }
+        public IProductRepository Product { get; set; }
 
         public void Dispose()
         {
             _db.Dispose();
         }
 
-        public void Save() // All changes will be saved when the Save method is called at the 'parent' level
+        public void Save()
         {
             _db.SaveChanges();
         }
