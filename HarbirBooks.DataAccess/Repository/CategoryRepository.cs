@@ -23,7 +23,7 @@ namespace HarbirBooks.DataAccess.Repository
             // then pass the id as a generic entity which matches the category id
 
             var objFromDb = _db.Categories.FirstOrDefault(s => s.Id == category.Id);
-            if (objFromDb != null)    // save the changes if not null
+            if (objFromDb != null)
             {
                 objFromDb.Name = category.Name;
                 _db.SaveChanges();

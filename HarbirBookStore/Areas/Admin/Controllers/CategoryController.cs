@@ -11,11 +11,11 @@ namespace HarbirBookStore.Areas.Admin.Controllers
     [Area("Admin")]
     public class CategoryController : Controller
     {
-        private readonly IUnitOfWork _UnitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CategoryController(IUnitOfWork UnitOfWork)
+        public CategoryController(IUnitOfWork unitOfWork)
         {
-            _UnitOfWork = UnitOfWork;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
@@ -31,7 +31,7 @@ namespace HarbirBookStore.Areas.Admin.Controllers
                 return View(category);
             }
             //this for the edit
-            category = _UnitOfWork.Category.Get(id.GetValueOrDefault());
+            category = _unitOfWork.Category.Get(id.GetValueOrDefault());
             if (category == null)
             {
                 return NotFound();
@@ -49,14 +49,14 @@ namespace HarbirBookStore.Areas.Admin.Controllers
             {
                 if(category.Id == 0)
                 {
-                    _UnitOfWork.Category.Add(category);
-                    _UnitOfWork.Save();
+                    _unitOfWork.Category.Add(category);
+                    _unitOfWork.Save();
                 }
                 else
                 {
-                    _UnitOfWork.Category.Update(category);
+                    _unitOfWork.Category.Update(category);
                 }
-                _UnitOfWork.Save();
+                _unitOfWork.Save();
                 return RedirectToAction(nameof(Index));         //to see all the categories
             }
             return View(category);
@@ -69,20 +69,20 @@ namespace HarbirBookStore.Areas.Admin.Controllers
         public IActionResult GetAll()
         {
             //return NotFound();
-            var allObj = _UnitOfWork.Category.GetAll();
+            var allObj = _unitOfWork.Category.GetAll();
             return Json(new { data = allObj });
         }
         [HttpDelete]
 
         public IActionResult Delete(int id)
         {
-            var objFromDb = _UnitOfWork.Category.Get(id);
+            var objFromDb = _unitOfWork.Category.Get(id);
             if (objFromDb == null)
             {
                 return Json(new { success = false, message = "Error while deleting" });
             }
-            _UnitOfWork.Category.Remove(objFromDb);
-            _UnitOfWork.Save();
+            _unitOfWork.Category.Remove(objFromDb);
+            _unitOfWork.Save();
             return Json(new { success = true, message = "Delete successful" });
         }
         #endregion

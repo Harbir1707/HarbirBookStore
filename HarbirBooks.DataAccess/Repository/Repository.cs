@@ -10,7 +10,7 @@ using System.Text;
 namespace HarbirBooks.DataAccess.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
-    {                   // modify the database w/ db context
+    {                                                                   // modify the database w/ db context
         private readonly ApplicationDbContext _db;      
         internal DbSet<T> dbSet;
 
