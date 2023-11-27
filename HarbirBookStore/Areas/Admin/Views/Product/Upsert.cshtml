@@ -1,4 +1,4 @@
-﻿@model HarbirBooks.Models.ViewModels.ProductVM
+﻿@model HarbirBooks.Models.ViewModels.ProductVM;
 @{
  
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -17,7 +17,7 @@
             <input type="hidden" asp-for="Product.Id" />
         }
         <div class="col-12 border-bottom">
-            <h2 class="text-primary">e</h2>
+            <h2 class="text-primary">@title</h2>
         </div>
         <div class="col-8 pt-4">
             <div class="form-group row">

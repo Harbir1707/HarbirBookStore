@@ -153,6 +153,10 @@ in product, created an Upsert.cshtml and modified the code
 found some errors, working on it
 product - NOT WORKING...
 
+1640
+made some changes in the Upsert.cshtml inside the product
+
+
 
 
 
