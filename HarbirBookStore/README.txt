@@ -120,23 +120,38 @@ closing time: 2346
 Starting time: 1545
 Date: 2023-11-20
 
+2018
 for the next part, first created the CoverTypeRepository.cs and ICoverTypeRepository.cs inside the Repository folder
 then made some changes in it and edited the UnitOfWork and IUnitOfWork
 created a CoverType.cs inside the Models folder and modified  it
+2050
 made CoverTypeController.cs inside the controllers and also created the Upsert.cshtml, then modified both of them
-found some errors and tried to fix it
+found some errors in CoverTypeRepository.cs and tried to fix it
 FIXED IT....!
+2106
+made changes in layout.cshtml and fixed the error which was showing in the Upsert.cshtml
+file was not working, create button was not working, trying to fix this issue
+finally fixed it....
+now created the Product.cs and modified the code inside it and then edited the ApplicationDbContext
+1519
+add the migration and updated the database 
+added Timestamp here --- 20231126201916_AddProductToDb.cs
+1540
+added the IProductRepository interface and ProductRepository class
+then modify UnitOfWork and IUnitOfWork
+save and run it
+IT IS WORKING...!
 
-
-
-
-
-
-
-
-
-
-Timestamp --- 20231126201916_AddProductToDb.cs
+1545
+created the ProductController.cs and added the code in it
+added ProductVM class and then installed Microsoft.AspNetCore.Mvc.ViewFeatures package
+1609
+created Index.cshtml and modified it
+modified the Product.js and added a new link to product in layout.cshtml
+1630
+in product, created an Upsert.cshtml and modified the code 
+found some errors, working on it
+product - NOT WORKING...
 
 
 
