@@ -157,7 +157,7 @@ product - NOT WORKING...
 made some changes in the Upsert.cshtml inside the product
 
 1251
-trying to solve the error 
+trying to solve the error and added the upsert.cshtml in the product folder
 
 
 
