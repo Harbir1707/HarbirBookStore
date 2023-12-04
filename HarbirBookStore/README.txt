@@ -156,6 +156,9 @@ product - NOT WORKING...
 1640
 made some changes in the Upsert.cshtml inside the product
 
+1251
+trying to solve the error 
+
 
 
 
